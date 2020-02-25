@@ -1,26 +1,33 @@
 {
-  "name": "takdeniz/laravel-likable-comments",
-  "description": "Laravel comment with like/dislike feature",
-  "type": "library",
-  "keywords": [
-    "takdeniz",
-    "laravel-comment",
-    "laravel-comment-like",
-    "laravel-like"
-  ],
-  "require": {
-    "actuallymab/laravel-comment": "^1.0"
-  },
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Tuncay Akdeniz",
-      "email": "akdeniztuncay44@gmail.com"
-    }
-  ],
-  "autoload": {
-    "psr-4": {
-      "Takdeniz\\LikableComment\\": "src/"
-    }
-  }
+	"name": "takdeniz/laravel-likable-comments",
+	"description": "Laravel comment with like/dislike feature",
+	"type": "library",
+	"keywords": [
+		"takdeniz",
+		"laravel-comment",
+		"laravel-comment-like",
+		"laravel-like"
+	],
+	"require": {
+		"actuallymab/laravel-comment": "^1.0"
+	},
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Tuncay Akdeniz",
+			"email": "akdeniztuncay44@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Takdeniz\\LikableComment\\": "src/"
+		}
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"\\Takdeniz\\LikableComment\\LikableComment"
+			]
+		}
+	}
 }
