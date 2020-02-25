@@ -1,5 +1,5 @@
 {
-	"name": "takdeniz/laravel-likable-comments",
+	"name": "takdeniz/laravel-likable-comment",
 	"description": "Laravel comment with like/dislike feature",
 	"type": "library",
 	"keywords": [
