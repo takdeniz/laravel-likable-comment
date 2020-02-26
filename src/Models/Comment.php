@@ -1,8 +1,6 @@
 <?php
 namespace Takdeniz\LikableComment\Models;
 
-use Illuminate\Database\Eloquent\Relations\MorphMany;
-
 /**
  *
  * Class PhoneVerify
@@ -16,8 +14,11 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
  */
 class Comment extends \Actuallymab\LaravelComment\Models\Comment
 {
-	public function likes(): MorphMany
+	/**
+	 * @return \Illuminate\Database\Eloquent\Relations\HasMany
+	 */
+	public function likes()
 	{
-		return $this->morphMany(config('comment.like_model'), 'likable');
+		return $this->hasMany(config('comment.like_model'));
 	}
 }
