@@ -18,7 +18,7 @@ class CreateCommentLikesTable extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('comment_likes', function (Blueprint $table) {
 			$table->bigIncrements('id');
@@ -35,7 +35,7 @@ class CreateCommentLikesTable extends Migration
      *
      * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('comment_likes');
     }

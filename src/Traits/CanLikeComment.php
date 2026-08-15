@@ -19,7 +19,7 @@ trait CanLikeComment
 	 * @param bool    $isLiked
 	 * @return mixed
 	 */
-	public function likeOrDislike(Comment $comment, $isLiked = true)
+	public function likeOrDislike(Comment $comment, bool $isLiked = true): mixed
 	{
 		$existReaction = $this->reactions()->where('comment_id', $comment->id)->first();
 		if ($existReaction) {
@@ -52,7 +52,7 @@ trait CanLikeComment
 	 * @param Comment $comment
 	 * @return mixed
 	 */
-	public function like(Comment $comment)
+	public function like(Comment $comment): mixed
 	{
 		return $this->likeOrDislike($comment, true);
 	}
@@ -61,7 +61,7 @@ trait CanLikeComment
 	 * @param Comment $comment
 	 * @return mixed
 	 */
-	public function dislike(Comment $comment)
+	public function dislike(Comment $comment): mixed
 	{
 		return $this->likeOrDislike($comment, false);
 	}
@@ -69,7 +69,7 @@ trait CanLikeComment
 	/**
 	 * @return HasMany
 	 */
-	public function reactions()
+	public function reactions(): HasMany
 	{
 		return $this->hasMany(config('comment.like_model'));
 	}

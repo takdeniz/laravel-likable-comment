@@ -11,7 +11,7 @@ class UpdateCommentsTable extends Migration
 	 *
 	 * @return void
 	 */
-	public function up()
+	public function up(): void
 	{
 		Schema::table($this->getTable(), function (Blueprint $table) {
 			$table->string('like')->default(0);
@@ -24,7 +24,7 @@ class UpdateCommentsTable extends Migration
 	 *
 	 * @return void
 	 */
-	public function down()
+	public function down(): void
 	{
 		Schema::table($this->getTable(), function (Blueprint $table) {
 			$table->dropColumn('like');
@@ -32,7 +32,7 @@ class UpdateCommentsTable extends Migration
 		});
 	}
 
-	protected function getTable()
+	protected function getTable(): string
 	{
 		$model = config('comment.model');
 

@@ -9,7 +9,7 @@
 		"laravel-like"
 	],
 	"require": {
-		"actuallymab/laravel-comment": "^1.0"
+		"mll-lab/laravel-comment": "^1.1.0"
 	},
 	"license": "MIT",
 	"authors": [

@@ -11,7 +11,7 @@ class LikableCommentServiceProvider extends ServiceProvider
 	 *
 	 * @return void
 	 */
-	public function boot()
+	public function boot(): void
 	{
 
 		$configFile = dirname(__DIR__) . '/config/config.php';

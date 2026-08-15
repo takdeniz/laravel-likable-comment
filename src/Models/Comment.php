@@ -17,7 +17,7 @@ class Comment extends \Actuallymab\LaravelComment\Models\Comment
 	/**
 	 * @return \Illuminate\Database\Eloquent\Relations\HasMany
 	 */
-	public function likes()
+	public function likes(): \Illuminate\Database\Eloquent\Relations\HasMany
 	{
 		return $this->hasMany(config('comment.like_model'));
 	}
